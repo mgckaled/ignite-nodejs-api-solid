@@ -1,0 +1,82 @@
+<!-- markdownlint-disable MD033 -->
+
+# Ignite Node.js - `API SOLID`
+
+<div align="center">
+   <img alt="Node.js" src=".github/assets/nodejs-logo.jpg" width="25%"/>
+</div>
+<br>
+
+<div align="center">
+   <a href="https://github.com/mgckaled">
+      <img alt="Made by mgckaled" src="https://img.shields.io/badge/made%20by-mgckaled-yellow">
+   </a>
+   <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/mgckaled/ignite-nodejs-api-solid>
+   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/mgckaled/ignite-nodejs-api-solid>
+</div>
+
+<br>
+
+<div align="center">
+
+[**Projeto**](#projeto) &nbsp;&nbsp;**•**&nbsp;&nbsp;
+[**Tecnologias**](#tecnologias) &nbsp;&nbsp;**•**&nbsp;&nbsp;
+[**Licença**](#licença)
+
+</div>
+
+## Projeto
+
+Foi desenvolvido uma aplicação de check-ins para academias.
+
+**Conceitos e recursos utilziados**:
+
+- SOLID
+- Design Patterns
+- Docker para iniciar o banco de dados,
+- JWT
+- Refresh Tokens
+- RBAC
+
+### RFs (Requisitos funcionais)
+
+- [x] Deve ser possível se cadastrar;
+- [x] Deve ser possível se autenticar;
+- [x] Deve ser possível obter o perfil de um usuário logado;
+- [x] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
+- [x] Deve ser possível o usuário obter o seu histórico de check-ins;
+- [x] Deve ser possível o usuário buscar academias próximas (até 10km);
+- [x] Deve ser possível o usuário buscar academias pelo nome;
+- [x] Deve ser possível o usuário realizar check-in em uma academia;
+- [x] Deve ser possível validar o check-in de um usuário;
+- [x] Deve ser possível cadastrar uma academia;
+
+### RNs (Regras de negócio)
+
+- [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
+- [x] O usuário não pode fazer 2 check-ins no mesmo dia;
+- [x] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
+- [x] O check-in só pode ser validado até 20 minutos após ser criado;
+- [x] O check-in só pode ser validado por administradores;
+- [x] A academia só pode ser cadastrada por administradores;
+
+### RNFs (Requisitos não-funcionais)
+
+- [x] A senha do usuário precisa estar criptografada;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
+- [x] O usuário deve ser identificado por um JWT (JSON Web Token);
+
+Análises e comentários sobre o código [AQUI](/.github/docs/index.md).
+
+## Tecnologias
+
+## Licença
+
+Distribuído sob a licença *MIT*. Veja [LICENSE](LICENSE) para mais informações.  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+
+---
+
+<h5 align="center">
+  2023 - <a href="https://github.com/mgckaled/">Marcel Kaled</a>
+</h5>
