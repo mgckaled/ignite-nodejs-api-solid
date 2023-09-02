@@ -67,7 +67,23 @@ Foi desenvolvido uma aplicação de check-ins para academias.
 - [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
 - [x] O usuário deve ser identificado por um JWT (JSON Web Token);
 
-Análises e comentários sobre o código [AQUI](/.github/docs/index.md).
+### Comandos utilizados no projeto
+
+```bash
+# iniciar projeto
+$ npm init -y
+
+# criar tsconfig.json
+npx tsc --init
+
+# iniciar prisma
+npx prisma init
+
+# executar tipagem / integração do prisma
+npx prisma generate
+```
+
+Análises, exercícios e comentários sobre o código [AQUI](/.github/docs/index.md).
 
 ## Tecnologias
 
