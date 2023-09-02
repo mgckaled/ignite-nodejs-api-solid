@@ -27,3 +27,27 @@ Aqui estão algumas características e funcionalidades principais do Prisma:
 7. **Integração com Frameworks**: Você pode usar o Prisma com diversos frameworks e bibliotecas populares, como Express.js, Fastify e Nest.js.
 
 Em resumo, o Prisma ORM é uma ferramenta poderosa para desenvolvedores que desejam simplificar a interação com bancos de dados relacionais em seus projetos Node.js e TypeScript, tornando o desenvolvimento de aplicativos mais eficiente e seguro.
+
+### O que é Docker
+
+Docker é uma plataforma de software que permite criar, implantar e executar aplicativos em contêineres virtuais. Ele permite que as aplicações e seus componentes sejam empacotados em um contêiner isolado e portátil, que pode ser executado em qualquer ambiente que tenha o Docker instalado, sem a necessidade de instalar dependências adicionais ou fazer grandes configurações. Com o Docker, é possível ter ambientes de desenvolvimento, teste e produção consistentes, seguros e escaláveis, aumentando a eficiência e a produtividade do desenvolvimento de software.
+
+### O que é DockerHub?
+
+O DockerHub é um serviço de registro de contêineres na nuvem que permite aos desenvolvedores armazenar, compartilhar e distribuir contêineres Docker. O Docker é uma plataforma de virtualização de contêineres que permite que os desenvolvedores empacotem aplicativos e suas dependências em contêineres isolados e portáteis.
+
+O DockerHub desempenha um papel importante no ecossistema Docker, oferecendo os seguintes recursos:
+
+1. Repositório de Contêineres: No DockerHub, você pode criar repositórios públicos ou privados para armazenar suas imagens de contêineres. Isso permite que você compartilhe facilmente seus contêineres com outros desenvolvedores ou equipes de desenvolvimento.
+
+2. Recursos de Colaboração: Você pode convidar outros desenvolvedores para colaborar em seus repositórios, permitindo que eles contribuam com imagens de contêineres ou acessem imagens compartilhadas.
+
+3. Imagens Pré-Construídas: O DockerHub oferece um vasto catálogo de imagens de contêineres pré-construídas que você pode usar como base para seus próprios projetos. Isso economiza tempo e esforço, pois você não precisa criar todas as imagens do zero.
+
+4. Integração com o Docker: O Docker é frequentemente usado em conjunto com o DockerHub. Você pode facilmente fazer push e pull de imagens de contêineres entre sua máquina local e o DockerHub, tornando o processo de distribuição de contêineres mais eficiente.
+
+5. Automação: O DockerHub suporta integração com sistemas de automação e ferramentas de CI/CD (Integração Contínua/Entrega Contínua), o que facilita a implantação automatizada de contêineres em diferentes ambientes.
+
+6. Segurança e Políticas de Acesso: Você pode configurar políticas de acesso e segurança para controlar quem pode acessar e modificar seus repositórios de contêineres, garantindo a conformidade e a segurança de suas imagens.
+
+Em resumo, o DockerHub é uma plataforma essencial para a comunidade de desenvolvedores que utilizam contêineres Docker, pois oferece um local centralizado para armazenar, compartilhar e distribuir imagens de contêineres, simplificando o processo de desenvolvimento e implantação de aplicativos baseados em contêineres.

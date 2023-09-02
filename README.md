@@ -81,6 +81,31 @@ npx prisma init
 
 # executar tipagem / integração do prisma
 npx prisma generate
+
+# subir docker container ccom banco de dados postgresql
+docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=<senha> -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+
+# exibir containers
+docker ps
+
+# todos os container já criados pelo desenvolvedor
+docker ps -a
+
+# executar imagem do banco de dados postgresql no docker
+docker start api-solid-pg
+# ou
+docker start <CONTAINER_ID>
+
+# parar imagem do banco de dados postgresql no docker
+docker stop api-solid-pg
+# ou
+docker stop <CONTAINER_ID>
+
+# executar migração do banco de dados
+npx prisma migrate dev
+
+# exibir intarface do banco de dados
+npx prisma studio
 ```
 
 Análises, exercícios e comentários sobre o código [AQUI](/.github/docs/index.md).
