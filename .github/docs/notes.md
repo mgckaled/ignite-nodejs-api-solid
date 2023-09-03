@@ -13,6 +13,7 @@
     - [O que é Docker](#o-que-é-docker)
     - [O que é DockerHub?](#o-que-é-dockerhub)
     - [O que é um *controller*?](#o-que-é-um-controller)
+    - [O que é um hash?](#o-que-é-um-hash)
     - [O que é *use case*?](#o-que-é-use-case)
     - [O que é um Design Pattern?](#o-que-é-um-design-pattern)
     - [Como funciona o Repository Pattern?](#como-funciona-o-repository-pattern)
@@ -111,6 +112,65 @@ Aqui estão algumas das responsabilidades típicas de um controller no back-end:
 6. Comunicação com o modelo e a camada de dados: Em muitos casos, o controller se comunica com a camada de modelo (que representa a lógica de negócios) para buscar ou persistir dados no banco de dados.
 
 No geral, um controller no back-end atua como um intermediário entre as requisições HTTP e o código de lógica de negócios do aplicativo, garantindo que as solicitações sejam tratadas de maneira adequada e que as respostas sejam geradas e enviadas de volta aos clientes de acordo com as regras de negócios e os requisitos do aplicativo.
+
+### O que é um hash?
+
+Um hash é uma função matemática que transforma um conjunto de dados em um valor de comprimento fixo. Esse valor resultante é geralmente uma sequência de números e letras, e é único para cada conjunto de dados de entrada. O objetivo principal de uma função de hash é criar uma representação única e "digitalmente impressa" de um conjunto de dados que possa ser usado para uma variedade de propósitos, como indexação, pesquisa e verificação de integridade dos dados.
+
+Aqui estão algumas características e usos comuns dos hashes:
+
+1. **Tamanho Fixo**: Os hashes têm um tamanho fixo, independentemente do tamanho dos dados de entrada. Isso significa que uma grande quantidade de dados pode ser resumida em um valor de hash relativamente curto.
+
+2. **Determinístico**: A mesma entrada sempre produzirá o mesmo hash. Isso é fundamental para a confiabilidade do processo de hash.
+
+3. **Unidirecional**: É difícil ou impossível (dependendo do algoritmo de hash) reverter um valor de hash para obter os dados originais. Isso fornece uma camada adicional de segurança.
+
+4. **Colisões**: Embora o objetivo seja que cada entrada gere um hash único, colisões (duas entradas diferentes que produzem o mesmo hash) podem ocorrer em casos raros, dependendo do algoritmo de hash utilizado. Portanto, algoritmos de hash são projetados para minimizar a probabilidade de colisões.
+
+Usos comuns de hashes incluem:
+
+1. **Segurança de Senha**: Senhas geralmente não são armazenadas em texto simples, mas sim como hashes no banco de dados. Quando um usuário insere uma senha, o sistema cria um hash da senha inserida e a compara com o hash armazenado no banco de dados.
+
+2. **Verificação de Integridade de Dados**: Os hashes são usados para verificar se os dados foram corrompidos durante a transmissão ou armazenamento. Se o hash dos dados recebidos for o mesmo que o hash original, os dados são considerados íntegros.
+
+3. **Armazenamento de Dados**: Em estruturas de dados como tabelas de dispersão, os hashes são usados para indexar e buscar informações rapidamente.
+
+4. **Criptografia**: Em algoritmos criptográficos, os hashes desempenham um papel importante na criação de chaves de sessão seguras, autenticação e muito mais.
+
+5. **Verificação de Integridade de Arquivos**: Muitas vezes, as organizações fornecem hashes para downloads de arquivos para que os usuários possam verificar se os arquivos foram baixados corretamente e não foram adulterados.
+
+Existem vários algoritmos de hash amplamente utilizados, como MD5, SHA-1, SHA-256, entre outros. No entanto, devido a vulnerabilidades identificadas, algoritmos mais antigos como MD5 e SHA-1 não são mais considerados seguros para aplicações críticas de segurança, e é recomendável o uso de algoritmos mais seguros, como SHA-256 ou SHA-3, para fins de segurança atualmente.
+
+O pacote `bcryptjs` é comumente usado para gerar hashes seguros de senhas em aplicativos Node.js. Aqui está um exemplo de código para gerar um hash de senha usando `bcryptjs`:
+
+```javascript
+const bcrypt = require('bcryptjs');
+
+const senhaOriginal = 'minhaSenhaSuperSecreta';
+
+// Gerar um hash de senha
+bcrypt.genSalt(10, (err, salt) => {
+  bcrypt.hash(senhaOriginal, salt, (err, hash) => {
+    if (err) {
+      console.error('Erro ao gerar o hash da senha:', err);
+    } else {
+      console.log('Senha original:', senhaOriginal);
+      console.log('Hash da senha:', hash);
+      
+      // Agora você pode armazenar o "hash" no banco de dados em vez da senha original
+    }
+  });
+});
+```
+
+Neste exemplo:
+
+1. Importamos o pacote `bcryptjs`.
+2. Definimos a senha original que queremos hash.
+3. Usamos `bcrypt.genSalt` para gerar um "sal" aleatório, que é adicionado à senha antes de gerar o hash. O número `10` é o custo do processo de hash, que determina o número de iterações usadas. Valores mais altos tornam o processo de hash mais seguro, mas também mais lento.
+4. Usamos `bcrypt.hash` para gerar o hash da senha original usando o sal gerado e o custo especificado. O resultado é o hash da senha, que pode ser armazenado em um banco de dados.
+
+Ao fazer login, você pode usar o mesmo processo para gerar um hash da senha inserida pelo usuário e compará-lo com o hash armazenado no banco de dados para autenticar o usuário. O `bcryptjs` cuida de verificar a senha com o sal apropriado e as iterações, tornando o processo seguro e eficaz.
 
 ### O que é *use case*?
 
