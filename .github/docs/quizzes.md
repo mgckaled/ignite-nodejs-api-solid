@@ -2,6 +2,15 @@
 
 > Voltar para o [`index`](./index.md)
 
+- [`Quizzes`](#quizzes)
+  - [Quiz - Estrutura do projeto](#quiz---estrutura-do-projeto)
+  - [Quiz - Integração com Prisma ORM](#quiz---integração-com-prisma-orm)
+  - [Quiz - Caso de uso e design patterns](#quiz---caso-de-uso-e-design-patterns)
+  - [Quiz - Design Patterns \& Testes](#quiz---design-patterns--testes)
+  - [Quiz - Implementando casos de uso](#quiz---implementando-casos-de-uso)
+  - [Quiz - Controllers \& Testes E2E](#quiz---controllers--testes-e2e)
+  - [Quiz - Refresh Token \& RBAC](#quiz---refresh-token--rbac)
+
 ## Quiz - Estrutura do projeto
 
 1. O que é um alias de importação no TypeScript? **Resposta**: Uma forma de importar arquivos no projeto com um nome mais curto
