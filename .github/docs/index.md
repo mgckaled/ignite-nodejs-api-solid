@@ -18,8 +18,9 @@
 - [`env/index.ts`](../docs/code/src/env/index.md)
 - [`lib/get-distance-between-coordinates.ts`](./code/src/lib/get-distance-between-coordinates.md)
 - `http/`
-  - [`middlewares/verify-jwt.ts`](./code/src/http/middlewares/verify-jwt.md)
-  - [`middlewares/verify-user-role.ts`](./code/src/http/middlewares/verify-user-role.md)
+  - `middlewares`
+    - [`verify-jwt.ts`](./code/src/http/middlewares/verify-jwt.md)
+    - [`verify-user-role.ts`](./code/src/http/middlewares/verify-user-role.md)
 - `controllers/`
   - `check-ins/`
     - [`create.ts`](../docs/code/src/http/controllers/check-ins/create.md)
@@ -39,6 +40,18 @@
     - [`metrics.ts`](../docs/code/src/http/controllers/users/metrics.md)
     - [`routes.ts`](../docs/code/src/http/controllers/users/routes.md)
     - [`validate.ts`](../docs/code/src/http/controllers/users/validate.md)
+- `repositories`
+  - `in-memory`
+    - [`in-memory-check-ins-repository.ts`]
+    - [`in-memory-gyms-repository.ts`]
+    - [`in-memory-users-repository.ts`]
+  - `prisma`
+    - [`prisma-check-ins-repository.ts`]
+    - [prisma-gyms-repository.ts]
+    - [`prisma-users-repository.ts`]
+  - [`check-ins-repository.ts`](../docs/code/src/repositories/check-ins-repository.md)
+  - [`gyms-repository.ts`](../docs/code/src/repositories/gyms-repository.md)
+  - [`users-repository.ts`](../docs/code/src/repositories/users-repository.md)
 
 ### `prisma`
 
