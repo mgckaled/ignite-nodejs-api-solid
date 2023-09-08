@@ -17,7 +17,6 @@ export interface CheckInsRepository {
 }
 ```
 
-
 Métodos da interface `CheckInsRepository`:
 
 - `findById(id: string): Promise<CheckIn | null>` recebe um ID como uma string e retorna uma promessa (Promise) de um objeto `CheckIn` ou `null`. Ele é usado para encontrar um check-in com base no seu ID.
@@ -31,7 +30,5 @@ Métodos da interface `CheckInsRepository`:
 - `findByUserIdOnDate(userId: string, date: Date): Promise<CheckIn | null>`:  recebe um ID de usuário (userId) como uma string e uma data (date) como um objeto `Date` e retorna uma promessa (Promise) de um objeto `CheckIn` ou `null`. Ele é usado para encontrar um check-in específico de um usuário em uma data específica.
 
 - `save(checkIn: CheckIn): Promise<CheckIn>`:  recebe um objeto `CheckIn` e retorna uma promessa (Promise) do mesmo objeto `CheckIn`. Ele é usado para salvar (atualizar) um check-in existente.
-
-
 
 > Voltar para o [`index`](../../../index.md)

@@ -17,6 +17,7 @@
     - [O que é *use case*?](#o-que-é-use-case)
     - [O que é um Design Pattern?](#o-que-é-um-design-pattern)
     - [Como funciona o Repository Pattern?](#como-funciona-o-repository-pattern)
+    - [O que é Princípio da Inversão de Dependência (DIP)?](#o-que-é-princípio-da-inversão-de-dependência-dip)
     - [O que são testes E2E?](#o-que-são-testes-e2e)
     - [O que é JWT?](#o-que-é-jwt)
     - [O que é e como funciona o Refresh Token?](#o-que-é-e-como-funciona-o-refresh-token)
@@ -336,6 +337,28 @@ main();
 ```
 
 Este exemplo é simples e usa um repositório em memória para fins de demonstração. Em uma aplicação real, você substituiria `InMemoryProductRepository` por um repositório que interaja com um banco de dados ou outro sistema de armazenamento de dados. O padrão de repositório facilita essa troca sem afetar a lógica de negócios em sua aplicação.
+
+### O que é Princípio da Inversão de Dependência (DIP)?
+
+O Princípio da Inversão de Dependência (DIP) é um dos cinco princípios do SOLID, um conjunto de diretrizes de design de software que visa criar código mais flexível, escalável e fácil de manter. O SOLID é frequentemente associado ao desenvolvimento orientado a objetos, mas muitos de seus princípios podem ser aplicados a outros paradigmas de programação também.
+
+O DIP, especificamente, enfoca a relação entre módulos de software e dependências entre eles. O princípio pode ser resumido da seguinte forma:
+
+> **"Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações. Além disso, abstrações não devem depender de detalhes. Detalhes devem depender de abstrações."**
+
+Isso implica que, ao projetar sistemas de software, você deve estruturar suas dependências de modo que módulos de alto nível, que representam funcionalidades mais abstratas e de nível superior, não dependam diretamente de módulos de baixo nível, que implementam detalhes concretos. Em vez disso, ambos devem depender de abstrações (interfaces ou classes abstratas), o que torna o sistema mais flexível e facilita a substituição de componentes sem afetar o funcionamento de módulos de alto nível.
+
+O DIP ajuda a alcançar os seguintes benefícios:
+
+1. **Flexibilidade**: Quando você segue o DIP, pode facilmente substituir ou estender módulos de baixo nível sem impactar os módulos de alto nível, desde que a nova implementação cumpra a mesma abstração.
+
+2. **Testabilidade**: É mais fácil criar testes unitários para módulos de alto nível quando eles não dependem diretamente de detalhes de implementação.
+
+3. **Desacoplamento**: O DIP promove um baixo acoplamento entre módulos, o que torna o código mais fácil de manter e estender.
+
+4. **Reutilização de código**: A abstração permite reutilizar módulos de baixo nível em diferentes contextos, desde que eles cumpram a mesma interface.
+
+Para implementar o DIP, você geralmente usa padrões de design como a Injeção de Dependência (Dependency Injection) e a Inversão de Controle (Inversion of Control) para garantir que as dependências sejam injetadas nos módulos de alto nível por meio de interfaces ou classes abstratas, em vez de serem instanciadas diretamente dentro desses módulos. Isso permite que você varie a implementação das dependências sem alterar o código de alto nível.
 
 ### O que são testes E2E?
 
