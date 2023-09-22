@@ -11,8 +11,8 @@
    <a href="https://github.com/mgckaled">
       <img alt="Made by mgckaled" src="https://img.shields.io/badge/made%20by-mgckaled-yellow">
    </a>
-   <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/mgckaled/ignite-nodejs-api-solid>
-   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/mgckaled/ignite-nodejs-api-solid>
+   <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/mgckaled/ignite-nodejs-api-solid">
+   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/mgckaled/ignite-nodejs-api-solid">
 </div>
 
 <br>
@@ -69,7 +69,7 @@ Foi desenvolvido uma aplicação de check-ins para academias.
 
 ### Comandos utilizados no projeto
 
-```bash
+```powershell
 # iniciar projeto
 $ npm init -y
 
