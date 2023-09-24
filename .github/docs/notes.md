@@ -23,6 +23,7 @@
     - [O que é e como funciona o Refresh Token?](#o-que-é-e-como-funciona-o-refresh-token)
     - [O que é e como funciona um RBAC?](#o-que-é-e-como-funciona-um-rbac)
     - [O que é e como funciona um `In-Memory Test Databases`](#o-que-é-e-como-funciona-um-in-memory-test-databases)
+    - [O que é *coverage* de testes?](#o-que-é-coverage-de-testes)
 
 ## Dicas
 
@@ -48,6 +49,8 @@ SOLID é um acrônimo que representa cinco princípios de design de software ori
 
 Esses princípios SOLID são diretrizes valiosas para desenvolvedores de software que desejam criar sistemas mais flexíveis, extensíveis e fáceis de manter. Eles são amplamente aplicados em programação orientada a objetos, mas muitos de seus conceitos podem ser adaptados para outros paradigmas de programação também.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é o PRISMA?
 
 O Prisma é uma ferramenta de mapeamento objeto-relacional (ORM) para desenvolvimento de aplicativos em Node.js e TypeScript. Um ORM é uma biblioteca que facilita a interação com bancos de dados relacionais, como MySQL, PostgreSQL e SQLite, permitindo que os desenvolvedores utilizem uma abordagem mais orientada a objetos para manipular dados em vez de escrever consultas SQL diretamente.
@@ -69,6 +72,8 @@ Aqui estão algumas características e funcionalidades principais do Prisma:
 7. **Integração com Frameworks**: Você pode usar o Prisma com diversos frameworks e bibliotecas populares, como Express.js, Fastify e Nest.js.
 
 Em resumo, o Prisma ORM é uma ferramenta poderosa para desenvolvedores que desejam simplificar a interação com bancos de dados relacionais em seus projetos Node.js e TypeScript, tornando o desenvolvimento de aplicativos mais eficiente e seguro.
+
+> voltar para o [`sumário`](#sumário)
 
 ### O que é Docker
 
@@ -94,6 +99,8 @@ O DockerHub desempenha um papel importante no ecossistema Docker, oferecendo os 
 
 Em resumo, o DockerHub é uma plataforma essencial para a comunidade de desenvolvedores que utilizam contêineres Docker, pois oferece um local centralizado para armazenar, compartilhar e distribuir imagens de contêineres, simplificando o processo de desenvolvimento e implantação de aplicativos baseados em contêineres.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é um *controller*?
 
 Um "controller" (controlador) no contexto de desenvolvimento de software para o back-end é uma parte fundamental de uma arquitetura de aplicativo web ou sistema de software. Ele desempenha um papel importante na organização e na gestão das requisições HTTP que chegam ao servidor e na coordenação das operações necessárias para processar essas requisições.
@@ -115,6 +122,8 @@ Aqui estão algumas das responsabilidades típicas de um controller no back-end:
 6. Comunicação com o modelo e a camada de dados: Em muitos casos, o controller se comunica com a camada de modelo (que representa a lógica de negócios) para buscar ou persistir dados no banco de dados.
 
 No geral, um controller no back-end atua como um intermediário entre as requisições HTTP e o código de lógica de negócios do aplicativo, garantindo que as solicitações sejam tratadas de maneira adequada e que as respostas sejam geradas e enviadas de volta aos clientes de acordo com as regras de negócios e os requisitos do aplicativo.
+
+> voltar para o [`sumário`](#sumário)
 
 ### O que é um hash?
 
@@ -175,6 +184,8 @@ Neste exemplo:
 
 Ao fazer login, você pode usar o mesmo processo para gerar um hash da senha inserida pelo usuário e compará-lo com o hash armazenado no banco de dados para autenticar o usuário. O `bcryptjs` cuida de verificar a senha com o sal apropriado e as iterações, tornando o processo seguro e eficaz.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é *use case*?
 
 Em programação e engenharia de software, um "caso de uso" (use case, em inglês) é uma técnica que ajuda a descrever como um sistema ou software se comporta em resposta a diferentes interações ou eventos do usuário. Os casos de uso são uma parte importante do processo de especificação de requisitos e design de software. Eles ajudam a capturar e documentar os requisitos funcionais de um sistema de uma maneira que seja compreensível tanto para desenvolvedores quanto para clientes ou stakeholders.
@@ -198,6 +209,8 @@ Geralmente, um caso de uso é documentado em um formato que inclui os seguintes 
 7. Pós-condições: As condições que devem ser verdadeiras após a conclusão bem-sucedida do caso de uso.
 
 Os casos de uso são uma ferramenta valiosa para comunicar os requisitos de um sistema de maneira clara e concisa, permitindo que desenvolvedores e stakeholders entendam as funcionalidades esperadas e como elas se relacionam com as necessidades do usuário. Eles também podem ser usados como base para testes de aceitação, ajudando a verificar se o sistema atende aos requisitos especificados pelos casos de uso.
+
+> voltar para o [`sumário`](#sumário)
 
 ### O que é um Design Pattern?
 
@@ -224,6 +237,8 @@ Alguns benefícios do uso de design patterns incluem:
 - **Escalabilidade**: Muitos design patterns são projetados para escalar facilmente à medida que os requisitos do sistema mudam.
 
 É importante notar que os design patterns não devem ser aplicados indiscriminadamente. Eles devem ser usados com sabedoria e considerando o contexto específico do problema a ser resolvido. A escolha do design pattern correto depende da natureza do problema e dos requisitos do projeto. Além disso, é importante manter um equilíbrio entre a aplicação de design patterns e a manutenção da simplicidade do código.
+
+> voltar para o [`sumário`](#sumário)
 
 ### Como funciona o Repository Pattern?
 
@@ -340,6 +355,8 @@ main();
 
 Este exemplo é simples e usa um repositório em memória para fins de demonstração. Em uma aplicação real, você substituiria `InMemoryProductRepository` por um repositório que interaja com um banco de dados ou outro sistema de armazenamento de dados. O padrão de repositório facilita essa troca sem afetar a lógica de negócios em sua aplicação.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é Princípio da Inversão de Dependência (DIP)?
 
 O Princípio da Inversão de Dependência (DIP) é um dos cinco princípios do SOLID, um conjunto de diretrizes de design de software que visa criar código mais flexível, escalável e fácil de manter. O SOLID é frequentemente associado ao desenvolvimento orientado a objetos, mas muitos de seus princípios podem ser aplicados a outros paradigmas de programação também.
@@ -362,6 +379,8 @@ O DIP ajuda a alcançar os seguintes benefícios:
 
 Para implementar o DIP, você geralmente usa padrões de design como a Injeção de Dependência (Dependency Injection) e a Inversão de Controle (Inversion of Control) para garantir que as dependências sejam injetadas nos módulos de alto nível por meio de interfaces ou classes abstratas, em vez de serem instanciadas diretamente dentro desses módulos. Isso permite que você varie a implementação das dependências sem alterar o código de alto nível.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que são testes E2E?
 
 Testes E2E, ou Testes de Ponta a Ponta (End-to-End Tests em inglês), são um tipo de teste de software que verifica o funcionamento de um aplicativo ou sistema em seu ambiente de produção, simulando a jornada completa do usuário, desde o início até o fim, incluindo todas as interações possíveis entre os componentes e sistemas envolvidos. Esses testes são projetados para garantir que todas as partes do sistema estejam funcionando corretamente juntas e que a aplicação se comporte de acordo com as expectativas do usuário, imitando o uso real que os usuários finais fariam.
@@ -381,6 +400,8 @@ Aqui estão algumas características-chave dos testes E2E:
 6. **Detectam problemas de integração:** Os testes E2E são eficazes na detecção de problemas de integração entre os diferentes componentes do sistema, como falhas na comunicação entre a interface do usuário e o servidor.
 
 No entanto, os testes E2E também têm desafios, como a complexidade na criação e manutenção dos cenários de teste, a dependência de ambientes de teste semelhantes ao ambiente de produção e o tempo necessário para executar os testes. Portanto, eles são frequentemente combinados com outros tipos de testes, como testes unitários, testes de integração e testes de unidade funcional, para garantir uma cobertura completa dos testes de software.
+
+> voltar para o [`sumário`](#sumário)
 
 ### O que é JWT?
 
@@ -408,6 +429,8 @@ O processo de uso de um JWT geralmente envolve as seguintes etapas:
 
 JWTs são frequentemente usados em sistemas de autenticação e autorização, como autenticação de API, single sign-on (SSO) e em muitas outras aplicações onde a segurança e a identidade são fundamentais. Eles são populares porque são compactos, fáceis de usar e podem ser verificados sem a necessidade de consultar um banco de dados centralizado, tornando-os escaláveis e eficientes.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é e como funciona o Refresh Token?
 
 Um "refresh token" (token de atualização) é uma parte importante do sistema de autenticação e autorização usado em muitas aplicações e serviços online para garantir a segurança e a gestão de sessões de usuário de longa duração. Ele é frequentemente associado com o protocolo OAuth 2.0, que é usado para delegar autorização de acesso a recursos protegidos em nome de um usuário.
@@ -425,6 +448,8 @@ Como um refresh token funciona:
 A principal vantagem do uso de refresh tokens é a segurança. Como os access tokens têm um tempo de vida curto, mesmo que um access token seja comprometido, ele não permanecerá válido por muito tempo. Além disso, os refresh tokens podem ser revogados pelo usuário ou pelo servidor de autorização, o que adiciona uma camada adicional de controle.
 
 Em resumo, um refresh token é uma peça fundamental em sistemas de autenticação e autorização que permite a obtenção de novos access tokens de forma segura e contínua, garantindo a segurança e a praticidade das sessões de usuário em aplicativos e serviços online.
+
+> voltar para o [`sumário`](#sumário)
 
 ### O que é e como funciona um RBAC?
 
@@ -498,6 +523,8 @@ Neste exemplo simples, o sistema RBAC é implementado usando enums para definir 
 
 Em uma implementação real, teria um sistema de autenticação e um banco de dados que armazenaria as atribuições de função para usuários, juntamente com políticas de controle de acesso mais complexas.
 
+> voltar para o [`sumário`](#sumário)
+
 ### O que é e como funciona um `In-Memory Test Databases`
 
 Um "In-Memory Test Database" (Banco de Dados em Memória para Testes) é um tipo de banco de dados que é projetado para ser usado durante o desenvolvimento e execução de testes de software. A principal característica desse tipo de banco de dados é que ele armazena todos os dados em memória RAM, em oposição aos bancos de dados tradicionais que armazenam dados em disco.
@@ -522,4 +549,32 @@ Aqui está uma explicação de como um In-Memory Test Database funciona:
 
 Além disso, a escolha de um banco de dados em memória específico dependerá da linguagem de programação e das tecnologias que você está usando. Muitas linguagens de programação e estruturas de teste têm bibliotecas e ferramentas específicas para criar e gerenciar bancos de dados em memória para fins de teste.
 
+> voltar para o [`sumário`](#sumário)
+
+### O que é *coverage* de testes?
+
+A cobertura de testes (test coverage) é uma técnica usada no desenvolvimento de software para avaliar quão bem seus testes automatizados exercitam o código-fonte de um programa. Ela fornece uma métrica que indica quais partes do código foram executadas pelos testes e quais partes não foram. Isso ajuda os desenvolvedores a identificar áreas do código que não foram testadas e, portanto, podem conter erros não detectados. A cobertura de testes é uma parte essencial das práticas de garantia de qualidade de software. Aqui está como ela funciona:
+
+1. **Instrumentação do Código**: Para medir a cobertura de testes, o código-fonte é instrumentado. Isso significa que o código é modificado de alguma forma para registrar quais partes do código foram executadas. Isso pode ser feito adicionando instruções extras ao código, geralmente no nível de linha ou instrução.
+
+2. **Execução dos Testes**: Os testes automatizados, que são escritos pelos desenvolvedores para verificar o comportamento do código, são executados. Durante a execução dos testes, a ferramenta de cobertura rastreia quais partes do código estão sendo executadas.
+
+3. **Coleta de Dados de Cobertura**: Enquanto os testes são executados, a ferramenta de cobertura coleta informações sobre quais partes do código foram visitadas. Isso geralmente inclui informações sobre linhas específicas de código, instruções ou ramos condicionais que foram executados.
+
+4. **Geração de Relatório**: Após a execução dos testes, a ferramenta de cobertura gera um relatório que mostra a porcentagem de código que foi coberta pelos testes. Essa porcentagem é chamada de "cobertura de código". O relatório pode ser apresentado de várias maneiras, incluindo cobertura de linha, cobertura de instrução e cobertura de ramificação.
+
+   - **Cobertura de Linha**: Isso indica quantas linhas de código foram executadas pelos testes em relação ao número total de linhas no código-fonte.
+   - **Cobertura de Instrução**: Isso mede a porcentagem de instruções que foram executadas pelos testes em relação ao número total de instruções.
+   - **Cobertura de Ramificação**: Isso avalia a cobertura de todos os caminhos possíveis em estruturas condicionais, como declarações if/else. Ajuda a garantir que todos os ramos do código sejam testados.
+
+5. **Análise dos Resultados**: Os desenvolvedores analisam o relatório de cobertura para identificar áreas do código que não foram testadas ou que têm uma cobertura insuficiente. Isso ajuda a priorizar esforços de teste e correção de bugs.
+
+6. **Iteração**: Com base nos resultados da cobertura de testes, os desenvolvedores podem escrever testes adicionais para aumentar a cobertura ou corrigir problemas identificados nos testes existentes. Isso é um processo iterativo para melhorar a qualidade do software.
+
+Ferramentas populares para medir a cobertura de testes em JavaScript incluem o Istanbul (agora parte do Jest), o nyc (também conhecido como "Istanbul command-line interface") e várias outras bibliotecas e plugins específicos para diferentes estruturas e ambientes de desenvolvimento.
+
+Em resumo, a cobertura de testes é uma técnica importante para avaliar a qualidade dos testes automatizados e garantir que um código seja amplamente testado, o que é fundamental para a entrega de software confiável e de alta qualidade.
+
+> voltar para o [`sumário`](#sumário)
+>
 > Voltar para o [`index`](./index.md)

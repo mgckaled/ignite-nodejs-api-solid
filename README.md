@@ -106,6 +106,10 @@ npx prisma migrate dev
 
 # exibir intarface do banco de dados
 npx prisma studio
+
+# exibir coverage de testes (scripts do package.json)
+# abrir o arquivo index.html dentro da pasta 'coverage' gerada
+npm run test:coverage
 ```
 
 Análises, exercícios e comentários sobre o código [AQUI](/.github/docs/index.md).
