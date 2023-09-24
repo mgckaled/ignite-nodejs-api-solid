@@ -52,6 +52,19 @@
   - [`check-ins-repository.ts`](../docs/code/src/repositories/check-ins-repository.md)
   - [`gyms-repository.ts`](../docs/code/src/repositories/gyms-repository.md)
   - [`users-repository.ts`](../docs/code/src/repositories/users-repository.md)
+- `use-cases/`
+  - [`errors/`](../docs/code/src/use-cases/errors.md)
+  - [`factories/`](../docs/code/src/use-cases/factories.md)
+  - [`authenticate.ts`](../docs/code/src/use-cases/authenticate.md)
+  - [`check-in.ts`](../docs/code/src/use-cases/check-in.md)
+  - [`create-gym.ts`](../docs/code/src/use-cases/create-gym.md)
+  - [`fetch-nearby-gyms.ts`](../docs/code/src/use-cases/fetch-nearby-gyms.md)
+  - [`fetch-user-check-ins-history.ts`](../docs/code/src/use-cases/fetch-user-check-ins-history.md)
+  - [`get-user-metrics.ts`](../docs/code/src/use-cases/get-user-metrics.md)
+  - [`get-user-profile.ts`](../docs/code/src/use-cases/get-user-profile.md)
+  - [`register.ts`](../docs/code/src/use-cases/register.md)
+  - [`search-gyms.ts`](../docs/code/src/use-cases/search-gyms.md)
+  - [`validate-check-in.ts`](../docs/code/src/use-cases/validate-check-in.md)
 
 ### `prisma`
 
