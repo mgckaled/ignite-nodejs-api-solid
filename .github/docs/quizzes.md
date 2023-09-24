@@ -41,8 +41,11 @@
 8. Ao utilizarmos uma interface para um repositório, é correto afirmar que: **Resposta**: Nossa aplicação dependerá de uma abstração e isso a tornará mais flexível e menos acoplada
 9. No Fastify, qual o método que nos auxilia a criarmos erros globais? **Resposta**: `setErrorHandler`
 
-
 ## Quiz - Design Patterns & Testes
+
+1. Quais são as vantagens de usar um InMemoryDatabase em testes? **Resposta**: Reduz a complexidade dos testes, Permite testar sem se preocupar com dados da produção, Oferece um desempenho melhor do que um banco de dados real.
+2. O que é um "falso" InMemoryTestDatabase? **Resposta**: Um banco de dados que armazena os dados em memória, mas também usa o disco para armazenar os dados permanentemente.
+3. Qual é a principal razão para medir a cobertura de testes? **Resposta**: Identificar fluxos no código que não foram testados
 
 ## Quiz - Implementando casos de uso
 
