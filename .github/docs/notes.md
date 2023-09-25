@@ -26,6 +26,7 @@
     - [O que é e como funciona um `In-Memory Test Databases`](#o-que-é-e-como-funciona-um-in-memory-test-databases)
     - [O que é *coverage* de testes?](#o-que-é-coverage-de-testes)
     - [O que é Test Driven Development (TDD)?](#o-que-é-test-driven-development-tdd)
+    - [O que é Fórmula de Haversine](#o-que-é-fórmula-de-haversine)
 
 ## Dicas
 
@@ -673,6 +674,64 @@ O conceito "red, green and refactor" é uma abordagem do TDD (Test-Driven Develo
 - Refactor (Refatorar): após o teste passar, o desenvolvedor refatora o código para melhorar a qualidade, sem alterar seu comportamento.
 
 Essa abordagem garante que o código seja desenvolvido com base em testes confiáveis, resultando em um código mais limpo, seguro e fácil de manter.
+
+> voltar para o [`sumário`](#sumário)
+
+### O que é Fórmula de Haversine
+
+A fórmula de Haversine é uma equação utilizada para calcular a distância entre dois pontos em uma esfera, como a Terra. Essa fórmula é especialmente útil para calcular a distância entre duas coordenadas geográficas (latitude e longitude) na superfície da Terra, considerando a curvatura da Terra.
+
+Aqui está a fórmula de Haversine:
+
+``` python
+a = sin²(Δlat/2) + cos(lat1) * cos(lat2) * sin²(Δlong/2)
+c = 2 * atan2(√a, √(1-a))
+distance = R * c
+```
+
+Onde:
+
+- `lat1` e `long1` são a latitude e a longitude do primeiro ponto em radianos.
+- `lat2` e `long2` são a latitude e a longitude do segundo ponto em radianos.
+- `Δlat` é a diferença entre as latitudes (`lat2 - lat1`) em radianos.
+- `Δlong` é a diferença entre as longitudes (`long2 - long1`) em radianos.
+- `R` é o raio da Terra (em metros, por exemplo, 6371 km para a Terra).
+- `distance` é a distância entre os dois pontos.
+
+Aqui está um exemplo de como você pode calcular a distância usando a fórmula de Haversine em TypeScript:
+
+```typescript
+function haversine(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const R = 6371; // Raio médio da Terra em quilômetros
+    const dLat = degToRad(lat2 - lat1);
+    const dLon = degToRad(lon2 - lon1);
+
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    const distance = R * c;
+    return distance;
+}
+
+function degToRad(degrees: number): number {
+    return degrees * (Math.PI / 180);
+}
+
+// Exemplo de uso
+const lat1 = 52.5200; // Latitude de Berlim, Alemanha
+const lon1 = 13.4050; // Longitude de Berlim, Alemanha
+
+const lat2 = 48.8566; // Latitude de Paris, França
+const lon2 = 2.3522; // Longitude de Paris, França
+
+const distance = haversine(lat1, lon1, lat2, lon2);
+console.log(`A distância entre Berlim e Paris é de ${distance.toFixed(2)} km.`);
+```
+
+Neste exemplo, a função `haversine` calcula a distância em quilômetros entre Berlim e Paris usando suas coordenadas geográficas. Certifique-se de que as coordenadas estejam em graus decimais e que a distância seja expressa em quilômetros ou na unidade de sua escolha, ajustando o valor de `R` conforme necessário.
 
 > voltar para o [`sumário`](#sumário)
 >
