@@ -25,6 +25,7 @@
     - [O que é e como funciona um RBAC?](#o-que-é-e-como-funciona-um-rbac)
     - [O que é e como funciona um `In-Memory Test Databases`](#o-que-é-e-como-funciona-um-in-memory-test-databases)
     - [O que é *coverage* de testes?](#o-que-é-coverage-de-testes)
+    - [O que é Test Driven Development (TDD)?](#o-que-é-test-driven-development-tdd)
 
 ## Dicas
 
@@ -633,6 +634,45 @@ A cobertura de testes (test coverage) é uma técnica usada no desenvolvimento d
 Ferramentas populares para medir a cobertura de testes em JavaScript incluem o Istanbul (agora parte do Jest), o nyc (também conhecido como "Istanbul command-line interface") e várias outras bibliotecas e plugins específicos para diferentes estruturas e ambientes de desenvolvimento.
 
 Em resumo, a cobertura de testes é uma técnica importante para avaliar a qualidade dos testes automatizados e garantir que um código seja amplamente testado, o que é fundamental para a entrega de software confiável e de alta qualidade.
+
+> voltar para o [`sumário`](#sumário)
+
+### O que é Test Driven Development (TDD)?
+
+O Test Driven Development (TDD), que significa "Desenvolvimento Orientado a Testes", é uma abordagem de desenvolvimento de software que coloca um forte foco na escrita de testes automatizados antes da implementação do código principal. O TDD segue um ciclo iterativo e consiste em três passos principais:
+
+1. **Especificação dos Testes (Test Specification)**:
+   - Começa-se por escrever testes automatizados que descrevem o comportamento desejado do sistema ou da funcionalidade que está sendo desenvolvida. Esses testes são geralmente escritos antes que o código seja escrito.
+
+2. **Implementação Mínima (Minimum Implementation)**:
+   - Com os testes em mãos, o próximo passo é escrever o código mínimo necessário para fazer os testes recém-criados passarem. Isso significa que a implementação inicial pode ser simplificada e atender apenas aos requisitos dos testes existentes.
+
+3. **Refatoração (Refactoring)**:
+   - Após a implementação inicial, é importante refinar o código, tornando-o mais limpo, eficiente e mantível. Durante esse processo de refatoração, os testes ainda devem ser executados para garantir que nenhuma funcionalidade seja quebrada.
+
+O ciclo de TDD é repetido continuamente, com a adição de novos testes para funcionalidades adicionais e a melhoria do código existente. O objetivo principal do TDD é garantir que o código seja testado de maneira abrangente desde o início do desenvolvimento, o que ajuda a:
+
+- **Melhorar a qualidade do código**: O código é escrito com testes rigorosos, o que ajuda a identificar e corrigir erros mais cedo no processo de desenvolvimento.
+
+- **Documentar o comportamento esperado**: Os testes servem como documentação viva do comportamento do sistema, tornando mais fácil para os desenvolvedores entenderem como as partes do código devem funcionar.
+
+- **Facilitar a manutenção e refatoração**: Com um conjunto sólido de testes, os desenvolvedores podem fazer alterações no código com confiança de que as funcionalidades existentes não estão quebradas.
+
+- **Promover a colaboração**: O TDD incentiva a comunicação e colaboração entre os membros da equipe, pois todos têm uma compreensão clara dos requisitos e do comportamento esperado.
+
+No entanto, o TDD também exige disciplina e pode ser desafiador no início, pois os testes devem ser escritos antes mesmo de se ter uma implementação funcional. No entanto, muitos desenvolvedores acreditam que os benefícios a longo prazo do TDD superam amplamente os desafios iniciais, pois resultam em código mais robusto e confiável.
+
+TDD (Test Driven Development) é uma abordagem de desenvolvimento de software em que os testes são escritos antes do código. Na aula, será explicado o conceito de TDD e aplicado no desenvolvimento da funcionalidade que valida se um usuário já realizou check-in no mesmo dia. Primeiramente, será criado o teste unitário e em seguida, o código será desenvolvido para que esse teste passe.
+
+Red, green and Refactor:
+
+O conceito "red, green and refactor" é uma abordagem do TDD (Test-Driven Development) para desenvolvimento de software. Consiste em três etapas:
+
+- Red (Vermelho): nesta fase, o desenvolvedor escreve um teste que deve falhar, ou seja, ele garante que o teste não passará sem implementar o código necessário.
+- Green (Verde): aqui, o desenvolvedor escreve a quantidade mínima de código necessária para fazer o teste passar.
+- Refactor (Refatorar): após o teste passar, o desenvolvedor refatora o código para melhorar a qualidade, sem alterar seu comportamento.
+
+Essa abordagem garante que o código seja desenvolvido com base em testes confiáveis, resultando em um código mais limpo, seguro e fácil de manter.
 
 > voltar para o [`sumário`](#sumário)
 >
