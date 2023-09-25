@@ -3,9 +3,9 @@ POST http://localhost:3333/users
 Content-Type: application/json
 
 {
-	"name": "Fred",
-	"email": "fred@proton.me",
-	"password": "666666"
+	"name": "Angela",
+	"email": "angela@proton.me",
+	"password": "101010"
 }
 
 ### authenticate sessions (credentials)
@@ -13,8 +13,8 @@ POST http://localhost:3333/sessions
 Content-Type: application/json
 
 {
-	"email": "fred@proton.me",
-	"password": "666666"
+	"email": "angela@proton.me",
+	"password": "101010"
 }	
 
 ###

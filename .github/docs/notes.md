@@ -17,6 +17,7 @@
     - [O que é *use case*?](#o-que-é-use-case)
     - [O que é um Design Pattern?](#o-que-é-um-design-pattern)
     - [Como funciona o Repository Pattern?](#como-funciona-o-repository-pattern)
+    - [Como funciona o Factory Pattern?](#como-funciona-o-factory-pattern)
     - [O que é Princípio da Inversão de Dependência (DIP)?](#o-que-é-princípio-da-inversão-de-dependência-dip)
     - [O que são testes E2E?](#o-que-são-testes-e2e)
     - [O que é JWT?](#o-que-é-jwt)
@@ -355,6 +356,63 @@ main();
 ```
 
 Este exemplo é simples e usa um repositório em memória para fins de demonstração. Em uma aplicação real, você substituiria `InMemoryProductRepository` por um repositório que interaja com um banco de dados ou outro sistema de armazenamento de dados. O padrão de repositório facilita essa troca sem afetar a lógica de negócios em sua aplicação.
+
+> voltar para o [`sumário`](#sumário)
+
+### Como funciona o Factory Pattern?
+
+O Factory Pattern é um padrão de design de software que pertence à categoria de padrões criacionais. Ele é usado para criar objetos sem especificar explicitamente a classe do objeto que será criada. Em vez disso, o Factory Pattern fornece uma interface para criar objetos, permitindo que as subclasses escolham a classe concreta a ser instanciada.
+
+Aqui está um exemplo em TypeScript que demonstra como o Factory Pattern pode ser implementado:
+
+```typescript
+// Interface para a classe que será criada pelo Factory
+interface Product {
+    operation(): string;
+}
+
+// Classes concretas que implementam a interface Product
+class ConcreteProduct1 implements Product {
+    operation() {
+        return 'Product 1';
+    }
+}
+
+class ConcreteProduct2 implements Product {
+    operation() {
+        return 'Product 2';
+    }
+}
+
+// Factory que cria objetos Product
+class ProductFactory {
+    createProduct(type: number): Product {
+        switch (type) {
+            case 1:
+                return new ConcreteProduct1();
+            case 2:
+                return new ConcreteProduct2();
+            default:
+                throw new Error('Tipo de produto desconhecido');
+        }
+    }
+}
+
+// Exemplo de uso do Factory Pattern
+const factory = new ProductFactory();
+
+const product1 = factory.createProduct(1);
+console.log(product1.operation()); // Saída: "Product 1"
+
+const product2 = factory.createProduct(2);
+console.log(product2.operation()); // Saída: "Product 2"
+```
+
+Neste exemplo, temos uma interface `Product` que define a operação que os produtos devem realizar. Em seguida, temos duas classes concretas, `ConcreteProduct1` e `ConcreteProduct2`, que implementam essa interface.
+
+O `ProductFactory` é responsável por criar objetos `Product`. Ele possui um método `createProduct` que recebe um tipo como argumento e decide qual classe concreta instanciar com base nesse tipo.
+
+Ao utilizar o Factory Pattern, você pode criar objetos `Product` sem precisar conhecer as classes concretas por trás deles. Isso facilita a manutenção e a extensão do código, pois você pode adicionar novas classes de produtos sem precisar modificar o código que cria os objetos.
 
 > voltar para o [`sumário`](#sumário)
 
