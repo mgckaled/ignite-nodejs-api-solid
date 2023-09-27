@@ -49,6 +49,14 @@
 
 ## Quiz - Implementando casos de uso
 
+1. Qual é o objetivo principal de limpar o contexto dos repositórios entre os testes unitários? **Resposta**: Evitar interferências de testes anteriores nos testes subsequentes
+2. Seguindo a aula, em qual fase do ciclo de vida dos testes unitários deve ocorrer a limpeza do contexto? **Resposta**: Antes de cada teste
+3. Em que tipo de testes a limpeza de contexto é especialmente importante? **Resposta**: Testes de unidade
+4. Para que serve o padrão Factory Pattern? **Resposta**: Para abstrair a criação de objetos sem expor a lógica de criação beneficiando a reutilização
+5. O que é TDD? **Resposta**: Um método de desenvolvimento de software que envolve escrever testes antes do código
+6. Quais os ciclos do TDD? **Resposta**: Red, Green, Refactor
+7. O que é o mocking? **Resposta**: Uma técnica para simular a execução de funções ou objetos
+
 ## Quiz - Controllers & Testes E2E
 
 ## Quiz - Refresh Token & RBAC

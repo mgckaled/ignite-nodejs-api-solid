@@ -27,6 +27,7 @@
     - [O que é *coverage* de testes?](#o-que-é-coverage-de-testes)
     - [O que é Test Driven Development (TDD)?](#o-que-é-test-driven-development-tdd)
     - [O que é Fórmula de Haversine](#o-que-é-fórmula-de-haversine)
+    - [O que é Mocking?](#o-que-é-mocking)
 
 ## Dicas
 
@@ -732,6 +733,30 @@ console.log(`A distância entre Berlim e Paris é de ${distance.toFixed(2)} km.`
 ```
 
 Neste exemplo, a função `haversine` calcula a distância em quilômetros entre Berlim e Paris usando suas coordenadas geográficas. Certifique-se de que as coordenadas estejam em graus decimais e que a distância seja expressa em quilômetros ou na unidade de sua escolha, ajustando o valor de `R` conforme necessário.
+
+> voltar para o [`sumário`](#sumário)
+
+### O que é Mocking?
+
+No contexto de programação, "mocking" se refere a uma técnica usada em testes de software para simular o comportamento de objetos ou componentes do sistema que ainda não foram implementados ou que têm dependências externas, como bancos de dados, serviços web ou APIs. O objetivo principal do mocking é isolar a unidade de código que está sendo testada, para que você possa verificar se ela funciona corretamente sem depender de partes externas do sistema que podem não estar disponíveis ou podem introduzir complexidade indesejada nos testes.
+
+Aqui estão alguns pontos-chave relacionados ao mocking:
+
+1. **Objetos Falsos (Mocks):** Mocks são objetos falsos que imitam o comportamento de objetos reais, mas são controlados pelo código de teste. Eles são usados para substituir as dependências reais durante os testes.
+
+2. **Dependências Simuladas:** Quando você está testando uma parte específica de um programa, pode criar mocks para simular o comportamento das dependências dessa parte. Por exemplo, se você estiver testando uma função que faz chamadas a um serviço web externo, você pode criar um mock do serviço web que retorna resultados predefinidos em vez de fazer chamadas reais à internet.
+
+3. **Isolamento de Testes:** O uso de mocks permite isolar o código que está sendo testado, garantindo que os resultados dos testes sejam consistentes e previsíveis, independentemente das condições externas.
+
+4. **Rápido e Eficiente:** Usar mocks pode tornar os testes mais rápidos, pois você não precisa esperar por chamadas de serviços externos ou configurações complexas do ambiente de produção.
+
+5. **Bibliotecas de Mocking:** Existem muitas bibliotecas de mocking disponíveis para diferentes linguagens de programação. Exemplos populares incluem Mockito para Java, unittest.mock para Python e sinon.js para JavaScript.
+
+6. **Integração com Testes Unitários:** Mocking é frequentemente usado em conjunto com testes unitários, onde você testa unidades individuais de código, como funções ou classes, de forma isolada.
+
+7. **Test-Driven Development (TDD):** Mocking é uma técnica útil em abordagens de desenvolvimento orientado a testes (TDD), onde os testes são escritos antes da implementação do código real.
+
+Em resumo, o mocking é uma técnica valiosa que ajuda os desenvolvedores a criar testes mais eficientes e confiáveis, permitindo que eles isolem o código que estão testando e simulem o comportamento das dependências externas. Isso ajuda a identificar problemas mais cedo no ciclo de desenvolvimento e a melhorar a qualidade do software.
 
 > voltar para o [`sumário`](#sumário)
 >
