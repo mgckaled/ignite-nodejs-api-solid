@@ -28,6 +28,10 @@
     - [O que é Test Driven Development (TDD)?](#o-que-é-test-driven-development-tdd)
     - [O que é Fórmula de Haversine](#o-que-é-fórmula-de-haversine)
     - [O que é Mocking?](#o-que-é-mocking)
+    - [O que é Basic Auth?](#o-que-é-basic-auth)
+      - [Workflow](#workflow)
+      - [Segurança](#segurança)
+      - [Quando utilizar?](#quando-utilizar)
 
 ## Dicas
 
@@ -757,6 +761,40 @@ Aqui estão alguns pontos-chave relacionados ao mocking:
 7. **Test-Driven Development (TDD):** Mocking é uma técnica útil em abordagens de desenvolvimento orientado a testes (TDD), onde os testes são escritos antes da implementação do código real.
 
 Em resumo, o mocking é uma técnica valiosa que ajuda os desenvolvedores a criar testes mais eficientes e confiáveis, permitindo que eles isolem o código que estão testando e simulem o comportamento das dependências externas. Isso ajuda a identificar problemas mais cedo no ciclo de desenvolvimento e a melhorar a qualidade do software.
+
+### O que é Basic Auth?
+
+O Basic Authentication é o sistema de autenticação mais comum do protocolo HTTP. Ele é incluído no header da requisição HTTP dessa maneira:
+
+`Authorization: Basic {credenciais em base 64 no formato usuário:senha}`
+
+Lembre que o [Base 64](https://en.wikipedia.org/wiki/Base64) é um esquema de codificação e não criptografia. Assim sendo, você DEVE utilizá-lo somente com uma conexão HTTPS (TLS). O uso do Base 64 se deve ao padrão [MIME](https://en.wikipedia.org/wiki/MIME).
+
+#### Workflow
+
+O esquema de autenticação funciona assim: o servidor responde ao cliente o código HTTP [`401` (Unauthorized)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) e com um cabeçalho `WWW-Authenticate`, que dá informações de como se autenticar. O cliente manda o *request* com o *header* de autenticação, mostrado acima. Se as credenciais estiverem corretas, receberá uma resposta diferente de [`403` (Forbidden)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403).
+
+![img](../assets/8B6Dh.png)
+
+#### Segurança
+
+O Basic Auth no HTTPS (TLS) é bom, mas não é 100% seguro. Seu uso dependerá do nível de risco dos dados que estiverem transitando. Perceba que a cada requisição você estará enviando as credenciais. A autenticação pode ser permanentemente armazenada no navegador, se requerido pelo usuário (bem difícil acontecer quando se trata de RESTful APIs).
+
+Existem várias ações a serem tomadas para aumentar a segurança do seu serviço. Não vou me alongar, porém destacar um ponto: gere chaves de API que não sejam quebradas facilmente. Dê uma olhada nos [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+
+> voltar para o [`sumário`](#sumário)
+
+#### Quando utilizar?
+
+Só você pode analisar isso. Qual é o nível de sigilo dos dados em trânsito via HTTP? Se for alto, talvez valha a pena investir em outro esquema de autenticação.
+
+Uma grande vantagem do Basic Auth é a simplicidade. Tanto para o cliente quanto para o servidor. Isso vai acelerar o desenvolvimento para os dois lados.
+
+Utilizar esquemas de autenticação mais modernos, como OAuth e OAuth2 trazem suas vantagens, mas tem que se analisar a real necessidade.
+
+1. Está transportando dados sigilosos? Talvez a sua opção não seja nem o OAuth ou OAuth2. De quanta segurança você precisa?
+2. Um esquema simples e de rápida implementação resolve seu problema? O Basic Auth parece ser bom.
+3. Precisa de funcionalidades como autenticação por outros serviços? O OAuth traz isso e pode ser a opção.
 
 > voltar para o [`sumário`](#sumário)
 >
