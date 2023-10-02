@@ -3,9 +3,9 @@ POST http://localhost:3333/users
 Content-Type: application/json
 
 {
-	"name": "Angela",
-	"email": "angela@proton.me",
-	"password": "101010"
+	"name": "Munir",
+	"email": "munir@proton.me",
+	"password": "1010104040"
 }
 
 ### authenticate sessions (credentials)
@@ -13,12 +13,12 @@ POST http://localhost:3333/sessions
 Content-Type: application/json
 
 {
-	"email": "angela@proton.me",
-	"password": "101010"
+	"email": "munir@proton.me",
+	"password": "1010104040"
 }	
 
 ###
 
 GET http://localhost:3333/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzEwYmVmZS00NDNkLTQxNWUtOWQ0Mi00MzlhYzM5Y2Q4ZmYiLCJpYXQiOjE2OTYxNzIwNzJ9.ywMi6M-Z_SN-r02gNcF7h_xMxMJZ6LWovv39My_WxpY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZGI4MmY0MC02OGVmLTQ1NGItODc3OS1mNzNjMjU0ZTUxNTYiLCJpYXQiOjE2OTYyNjU3NDh9.l2W8z0HAOPstDWSPcYtO2u6AFcmCKarycRFeLMyU-f8
 
