@@ -19,7 +19,7 @@ function generateDatabaseURL(schema: string) {
   return url.toString()
 }
 
-export default <Environment>(<unknown>{
+export default <Environment>{
   name: 'prisma',
   transformMode: 'web',
   async setup() {
@@ -30,14 +30,18 @@ export default <Environment>(<unknown>{
 
     execSync('npx prisma migrate deploy')
 
+    console.log('ok')
+
     return {
       async teardown() {
         await prisma.$executeRawUnsafe(
           `DROP SCHEMA IF EXISTS "${schema}" CASCADE`,
         )
 
+        console.log('ok')
+
         await prisma.$disconnect()
       },
     }
   },
-})
+}
