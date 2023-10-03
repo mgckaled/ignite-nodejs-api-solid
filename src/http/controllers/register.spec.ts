@@ -15,7 +15,7 @@ describe('Register (e2e)', () => {
     const response = await request(app.server).post('/users').send({
       name: 'John dae',
       email: 'johndae@example.com',
-      password: '654321',
+      password: '7654321',
     })
 
     expect(response.statusCode).toEqual(201)
