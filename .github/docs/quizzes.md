@@ -59,6 +59,13 @@
 
 ## Quiz - Controllers & Testes E2E
 
+1. O que significa a sigla JWT? **Resposta:** JSON Web Token
+2. Qual é o formato padrão de um JWT? **Resposta:** Um conjunto de pares chave-valor codificado em base64
+3. Como é feita a validação de um JWT? **Resposta:** O servidor valida a assinatura digital contida no token
+4. Qual é a melhor forma de garantir a segurança de um JWT? **Resposta:** Utilizar uma chave secreta forte para assinar e verificar a assinatura do token
+5. Qual é o risco de expor a chave secreta usada para assinar um JWT? **Resposta:** Um atacante pode criar tokens falsos e se passar pelo usuário autenticado
+6. Qual o principal motivo de ser criado um Test Environment? **Resposta:** Isolar o banco de dados para cada grupo de testes
+
 ## Quiz - Refresh Token & RBAC
 
 > Voltar para o [`index`](./index.md)
