@@ -68,4 +68,9 @@
 
 ## Quiz - Refresh Token & RBAC
 
+1. O que é um Refresh Token? **Resposta:** Um token usado para solicitar um novo Access Token sem precisar fazer login novamente.
+2. Qual é a principal vantagem do uso de Refresh Tokens em uma aplicação? **Resposta:** Permitir que o usuário permaneça conectado por períodos mais longos sem precisar digitar suas credenciais novamente.
+3. O que acontece se um Refresh Token expirar? **Resposta:** O usuário deve fazer login novamente.
+4. Como um Refresh Token é diferente de um Access Token? **Resposta:** Um Refresh Token é usado para solicitar um novo Access Token, enquanto um Access Token é usado para acessar recursos do aplicativo.
+
 > Voltar para o [`index`](./index.md)
