@@ -1,24 +1,77 @@
-### create users
-POST http://localhost:3333/users
+@HOST=http://localhost:3333
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUVNQkVSIiwic3ViIjoiMDRkMjI0MjctNWNmNy00ODcwLTkwMmUtZWVjOWE4YTY5MGRiIiwiaWF0IjoxNzAwMTQ2OTAxLCJleHAiOjE3MDA3NTE3MDF9.E4Z1rRXqK3mIDpYi45aaRB54fduvdPQMjTKsdioTF24
+@REFRESH_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiIwNjQzZWRjOC05NjI2LTQ3YWYtODhiMC1iZGFiZWVmM2U4NTEiLCJpYXQiOjE3MDAxNDYzMTUsImV4cCI6MTcwMDc1MTExNX0.HRV0iJkVJrh6_VQWpnY35n4JE0R625wrTofXiI8z1nM
+###
+POST {{HOST}}/users
 Content-Type: application/json
 
 {
-	"name": "Munir",
-	"email": "munir@proton.me",
-	"password": "1010104040"
+	"name": "Marcel",
+	"email": "marcel@proton.me",
+	"password": "101010404040"
 }
 
-### authenticate sessions (credentials)
-POST http://localhost:3333/sessions
+HTTP/1.1 409  - Conflict
+content-type: application/json; charset=utf-8
+content-length: 36
+date: Thu, 16 Nov 2023 15:01:25 GMT
+connection: close
+###
+POST {{HOST}}/sessions
 Content-Type: application/json
 
+
 {
-	"email": "munir@proton.me",
-	"password": "1010104040"
+	"email": "marcel@proton.me",
+	"password": "101010404040"
 }	
 
+HTTP/1.1 200  - OK
+content-type: application/json; charset=utf-8
+set-cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUVNQkVSIiwic3ViIjoiMDRkMjI0MjctNWNmNy00ODcwLTkwMmUtZWVjOWE4YTY5MGRiIiwiaWF0IjoxNzAwMTQ2OTAxLCJleHAiOjE3MDA3NTE3MDF9.E4Z1rRXqK3mIDpYi45aaRB54fduvdPQMjTKsdioTF24; Path=/; HttpOnly; Secure; SameSite=Strict
+content-length: 221
+date: Thu, 16 Nov 2023 15:01:41 GMT
+connection: close
 ###
+PATCH {{HOST}}/token/refresh
+Content-Type: application/json
+Cookie: refreshToken={{REFRESH_TOKEN}}
 
-GET http://localhost:3333/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZGI4MmY0MC02OGVmLTQ1NGItODc3OS1mNzNjMjU0ZTUxNTYiLCJpYXQiOjE2OTYyNjU3NDh9.l2W8z0HAOPstDWSPcYtO2u6AFcmCKarycRFeLMyU-f8
+{
+	"email": "admin@proton.me",
+	"password": "admin@12345"
+}	
 
+HTTP/1.1 200  - OK
+content-type: application/json; charset=utf-8
+set-cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiIwNjQzZWRjOC05NjI2LTQ3YWYtODhiMC1iZGFiZWVmM2U4NTEiLCJpYXQiOjE3MDAxNDY0MDAsImV4cCI6MTcwMDc1MTIwMH0.KUr9WR-SFHqxHuleTQvg_FbQGQ-irxFWwg54dmMBt9c; Path=/; HttpOnly; Secure; SameSite=Strict
+content-length: 220
+date: Thu, 16 Nov 2023 14:53:20 GMT
+connection: close
+###
+GET {{HOST}}/me
+Authorization: Bearer {{TOKEN}}
+
+HTTP/1.1 200  - OK
+content-type: application/json; charset=utf-8
+content-length: 150
+date: Thu, 16 Nov 2023 14:53:36 GMT
+connection: close
+###
+POST {{HOST}}/gyms
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "title": "Teste",
+  "description": "Test",
+  "phone": null,
+  "latitude": -20.3563235,
+  "longitude": -10.3563235
+}
+
+HTTP/1.1 401  - Unauthorized
+content-type: application/json; charset=utf-8
+content-length: 27
+date: Thu, 16 Nov 2023 15:02:02 GMT
+connection: close

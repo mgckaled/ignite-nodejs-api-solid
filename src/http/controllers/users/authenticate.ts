@@ -24,7 +24,9 @@ export async function authenticate(
     })
 
     const token = await reply.jwtSign(
-      {},
+      {
+        role: user.role,
+      },
       {
         sign: {
           sub: user.id,
@@ -33,7 +35,9 @@ export async function authenticate(
     )
 
     const refreshToken = await reply.jwtSign(
-      {},
+      {
+        role: user.role,
+      },
       {
         sign: {
           sub: user.id,
@@ -44,10 +48,10 @@ export async function authenticate(
 
     return reply
       .setCookie('refreshToken', refreshToken, {
-        path: '/', // backend pode ler o cookie
-        secure: true, // front-end não pode ler o valor do cookie como um valor primitivo
-        sameSite: true, // acesso exclusivo pelo domínio
-        httpOnly: true, // acesso exclusivo pelo contexto da requisição
+        path: '/',
+        secure: true,
+        sameSite: true,
+        httpOnly: true,
       })
       .status(200)
       .send({
